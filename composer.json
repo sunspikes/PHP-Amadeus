@@ -1,9 +1,8 @@
 {
     "name": "sunspikes/php-amadeus",
-    "description": "Amadeus flight booking library for PHP",
-    "keywords": ["amadeus", "booking", "flight"],
+    "description": "Amadeus flight booking client for PHP",
+    "keywords": ["amadeus", "booking", "flight", "php-amadeus", "Krishnaprasad MG", "sunspikes"],
     "homepage": "http://github.com/sunspikes/php-amadeus",
-    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -13,9 +12,24 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.5.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "^4.7.6",
+        "scrutinizer/ocular": "^1.1"
     },
     "autoload": {
-        "psr-4": {"Sunspikes\\": "src/"}
-    }
+        "psr-4": {"Sunspikes\\Amadeus\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sunspikes\\Tests\\Amadeus\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
